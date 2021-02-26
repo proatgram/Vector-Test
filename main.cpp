@@ -37,9 +37,12 @@ std::vector<int>* vectorTest() {
   return g2;
 }
 int main() {
-  //function();
+  //function();ls
+
   std::vector<int>* g2 = vectorTest();
-  printf("pointer g2 = %x\n", g2);
+  printf("pointer g2 = 0x%x\nValue of vector g2 slot 1: ", g2);
+  g2->push_back(56);
+  printf(" %d\n",g2->at(0));
   delete g2;
   g2 = nullptr;
 }
