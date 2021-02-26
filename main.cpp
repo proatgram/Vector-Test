@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdio>
 #include <vector>
 void function() {
       using namespace std;
@@ -25,12 +26,17 @@ void function() {
           cout << "\n";
       //return 0;
 }
+
+int vectorTest() {
+    //int g2*; 
+  std::vector<int> *g2 = new std::vector<int>;
+  g2->push_back(1);
+  //g2.push_back(2);
+  //printf("Pointer to g2: %d", *g2[1]);
+  return *g2;
+}
 int main() {
   function();
-
-  //int g2*; 
-  std::vector<int> *g2 = new std::vector<int>;
-  //g2.push_back(1);
-  //g2.push_back(2);
-  return g2[1];
+  int *g2 = vectorTest();
+  printf("pointer g2 = %d", *g2);
 }
